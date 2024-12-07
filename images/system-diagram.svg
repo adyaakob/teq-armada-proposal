@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+    </defs>
+    
+    <!-- Components -->
+    <!-- End Devices (Workers) -->
+    <g transform="translate(50,150)">
+        <rect x="0" y="0" width="120" height="80" rx="10" fill="#3498db" opacity="0.9"/>
+        <text x="60" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14">End Devices</text>
+        <text x="60" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Workers</text>
+    </g>
+
+    <!-- LoRaWAN Gateway -->
+    <g transform="translate(300,150)">
+        <rect x="0" y="0" width="120" height="80" rx="10" fill="#2c3e50" opacity="0.9"/>
+        <text x="60" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14">LoRaWAN</text>
+        <text x="60" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Gateway</text>
+    </g>
+
+    <!-- Solar Power System -->
+    <g transform="translate(300,20)">
+        <rect x="0" y="0" width="120" height="60" rx="10" fill="#f1c40f" opacity="0.9"/>
+        <text x="60" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Solar Power</text>
+    </g>
+
+    <!-- Cellular Network -->
+    <g transform="translate(550,150)">
+        <rect x="0" y="0" width="120" height="80" rx="10" fill="#e74c3c" opacity="0.9"/>
+        <text x="60" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Cellular</text>
+        <text x="60" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Network</text>
+    </g>
+
+    <!-- Network Server Cloud -->
+    <g transform="translate(550,300)">
+        <path d="M60,0 
+                C100,0 120,20 120,40 
+                C120,60 100,80 60,80 
+                C20,80 0,60 0,40 
+                C0,20 20,0 60,0" 
+            fill="#27ae60" opacity="0.9"/>
+        <text x="60" y="35" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Network Server</text>
+        <text x="60" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="14">Cloud</text>
+    </g>
+
+    <!-- Connections -->
+    <!-- End Devices to Gateway -->
+    <line x1="170" y1="190" x2="300" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="235" y="175" text-anchor="middle" font-family="Arial" font-size="12">LoRaWAN</text>
+
+    <!-- Solar Power to Gateway -->
+    <line x1="360" y1="80" x2="360" y2="150" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="380" y="115" text-anchor="start" font-family="Arial" font-size="12">Power</text>
+
+    <!-- Gateway to Cellular -->
+    <line x1="420" y1="190" x2="550" y2="190" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="485" y="175" text-anchor="middle" font-family="Arial" font-size="12">Data</text>
+
+    <!-- Cellular to Cloud -->
+    <line x1="610" y1="230" x2="610" y2="300" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="630" y="265" text-anchor="start" font-family="Arial" font-size="12">Internet</text>
+</svg>

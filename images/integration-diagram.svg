@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <!-- Styles -->
+    <defs>
+        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+            <polygon points="0 0, 10 3.5, 0 7" fill="#666"/>
+        </marker>
+        <!-- API Interface Pattern -->
+        <pattern id="api-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+            <path d="M-2,2 l4,-4 M0,10 l10,-10 M8,12 l4,-4" stroke="#fff" stroke-width="1" opacity="0.2"/>
+        </pattern>
+    </defs>
+    
+    <!-- LoRaWAN System Box -->
+    <g transform="translate(50,50)">
+        <rect x="0" y="0" width="200" height="300" rx="10" fill="#2c3e50" opacity="0.9"/>
+        <text x="100" y="40" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">LoRaWAN System</text>
+        
+        <!-- Components inside LoRaWAN box -->
+        <rect x="20" y="70" width="160" height="50" rx="5" fill="#3498db" opacity="0.8"/>
+        <text x="100" y="100" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Worker Tracking Devices</text>
+        
+        <rect x="20" y="140" width="160" height="50" rx="5" fill="#3498db" opacity="0.8"/>
+        <text x="100" y="170" text-anchor="middle" fill="white" font-family="Arial" font-size="12">LoRaWAN Gateway</text>
+        
+        <rect x="20" y="210" width="160" height="50" rx="5" fill="#3498db" opacity="0.8"/>
+        <text x="100" y="240" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Network Server</text>
+    </g>
+
+    <!-- API Interface -->
+    <g transform="translate(300,150)">
+        <rect x="0" y="0" width="200" height="100" rx="10" fill="#e67e22"/>
+        <rect x="0" y="0" width="200" height="100" rx="10" fill="url(#api-pattern)"/>
+        <text x="100" y="40" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">API Interface</text>
+        <text x="100" y="70" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Data Exchange Protocol</text>
+    </g>
+
+    <!-- Plantation Management System -->
+    <g transform="translate(550,50)">
+        <rect x="0" y="0" width="200" height="300" rx="10" fill="#27ae60" opacity="0.9"/>
+        <text x="100" y="40" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">Plantation Management</text>
+        <text x="100" y="60" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">System</text>
+
+        <!-- Components inside Management System box -->
+        <rect x="20" y="90" width="160" height="50" rx="5" fill="#2ecc71" opacity="0.8"/>
+        <text x="100" y="120" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Worker Management</text>
+
+        <rect x="20" y="160" width="160" height="50" rx="5" fill="#2ecc71" opacity="0.8"/>
+        <text x="100" y="190" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Real-time Monitoring</text>
+
+        <rect x="20" y="230" width="160" height="50" rx="5" fill="#2ecc71" opacity="0.8"/>
+        <text x="100" y="260" text-anchor="middle" fill="white" font-family="Arial" font-size="12">Data Analytics</text>
+    </g>
+
+    <!-- Data Flow Arrows -->
+    <!-- LoRaWAN to API -->
+    <line x1="250" y1="200" x2="300" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="275" y="190" text-anchor="middle" font-family="Arial" font-size="12">Data Out</text>
+
+    <!-- API to Management System -->
+    <line x1="500" y1="200" x2="550" y2="200" stroke="#666" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="525" y="190" text-anchor="middle" font-family="Arial" font-size="12">Data In</text>
+
+    <!-- Data Types Labels -->
+    <g transform="translate(300,280)">
+        <rect x="0" y="0" width="200" height="100" rx="5" fill="#34495e" opacity="0.8"/>
+        <text x="100" y="30" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold">Data Exchanged:</text>
+        <text x="100" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="12">• Worker Location Data</text>
+        <text x="100" y="75" text-anchor="middle" fill="white" font-family="Arial" font-size="12">• Time Stamps</text>
+        <text x="100" y="95" text-anchor="middle" fill="white" font-family="Arial" font-size="12">• Worker Activity Status</text>
+    </g>
+</svg>

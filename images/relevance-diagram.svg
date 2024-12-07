@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f5f6fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="50" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        TEQ ARMADA Expertise Alignment
+    </text>
+
+    <!-- Company Background Circle -->
+    <circle cx="200" cy="300" r="150" fill="#3498db" fill-opacity="0.1" stroke="#3498db" stroke-width="2"/>
+    <text x="200" y="250" font-family="Inter, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Company Background
+    </text>
+    
+    <!-- Background Items -->
+    <text x="130" y="290" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• Military Experience</text>
+    <text x="130" y="320" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• Civil Critical Missions</text>
+    <text x="130" y="350" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• Tech Partnerships</text>
+
+    <!-- Scope Circle -->
+    <circle cx="600" cy="300" r="150" fill="#2ecc71" fill-opacity="0.1" stroke="#2ecc71" stroke-width="2"/>
+    <text x="600" y="250" font-family="Inter, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Scope of Work
+    </text>
+    
+    <!-- Scope Items -->
+    <text x="530" y="290" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• Worker Tracking</text>
+    <text x="530" y="320" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• Real-time Solutions</text>
+    <text x="530" y="350" font-family="Inter, sans-serif" font-size="14" fill="#34495e">• System Integration</text>
+
+    <!-- Connecting Lines -->
+    <path d="M 350 300 L 450 300" stroke="#3498db" stroke-width="2" stroke-dasharray="5,5"/>
+    
+    <!-- Intersection Area -->
+    <circle cx="400" cy="300" r="50" fill="#9b59b6" fill-opacity="0.2" stroke="#9b59b6" stroke-width="2"/>
+    <text x="400" y="290" font-family="Inter, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        Alignment
+    </text>
+    <text x="400" y="310" font-family="Inter, sans-serif" font-size="12" text-anchor="middle" fill="#34495e">
+        Technical Expertise
+    </text>
+</svg>

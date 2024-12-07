@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000" height="450" viewBox="0 0 1000 450" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="1000" height="450" fill="#ffffff"/>
+    
+    <!-- Title -->
+    <text x="500" y="50" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        TEQ ARMADA Project Capability Matrix
+    </text>
+
+    <!-- Project Requirements Box -->
+    <rect x="50" y="100" width="300" height="280" fill="#f8fafd" stroke="#3498db" stroke-width="2" rx="10"/>
+    
+    <!-- Requirements Header (inside box) -->
+    <rect x="50" y="100" width="300" height="40" fill="#3498db" fill-opacity="0.1" stroke="#3498db" stroke-width="2" rx="10"/>
+    <text x="200" y="125" font-family="Inter, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">Project Requirements</text>
+    
+    <!-- Requirements Text -->
+    <text x="70" y="170" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">1. Real-time Tracking</text>
+    <text x="70" y="210" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">2. Secure Communications</text>
+    <text x="70" y="250" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">3. System Integration</text>
+    <text x="70" y="290" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">4. Field Operations</text>
+    <text x="70" y="330" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">5. Technical Support</text>
+
+    <!-- Capabilities Box -->
+    <rect x="650" y="100" width="300" height="280" fill="#f8fafd" stroke="#2ecc71" stroke-width="2" rx="10"/>
+    
+    <!-- Capabilities Header (inside box) -->
+    <rect x="650" y="100" width="300" height="40" fill="#2ecc71" fill-opacity="0.1" stroke="#2ecc71" stroke-width="2" rx="10"/>
+    <text x="800" y="125" font-family="Inter, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2c3e50">TEQ ARMADA Capabilities</text>
+    
+    <!-- Capabilities Text -->
+    <text x="670" y="170" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Military Experience</text>
+    <text x="670" y="210" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Critical Mission Systems</text>
+    <text x="670" y="250" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Tech Partnerships</text>
+    <text x="670" y="290" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Field Implementation</text>
+    <text x="670" y="330" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• 24/7 Support Team</text>
+
+    <!-- Connection Lines -->
+    <path d="M 350 165 L 650 165" stroke="#3498db" stroke-width="2"/>
+    <path d="M 350 205 L 650 205" stroke="#3498db" stroke-width="2"/>
+    <path d="M 350 245 L 650 245" stroke="#3498db" stroke-width="2"/>
+    <path d="M 350 285 L 650 285" stroke="#3498db" stroke-width="2"/>
+    <path d="M 350 325 L 650 325" stroke="#3498db" stroke-width="2"/>
+
+    <!-- Strength Indicators -->
+    <circle cx="500" cy="165" r="8" fill="#2ecc71"/>
+    <circle cx="500" cy="205" r="8" fill="#2ecc71"/>
+    <circle cx="500" cy="245" r="8" fill="#2ecc71"/>
+    <circle cx="500" cy="285" r="8" fill="#2ecc71"/>
+    <circle cx="500" cy="325" r="8" fill="#2ecc71"/>
+
+    <!-- Legend text only (no box) -->
+    <text x="500" y="400" font-family="Inter, sans-serif" font-size="14" text-anchor="middle" fill="#2c3e50">
+        <tspan x="500" dy="0">● Strong Capability Match</tspan>
+    </text>
+</svg>

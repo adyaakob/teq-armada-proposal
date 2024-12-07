@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#ffffff"/>
+    
+    <!-- Title -->
+    <text x="400" y="50" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#2c3e50">
+        TEQ ARMADA Project Capability Matrix
+    </text>
+
+    <!-- Matrix Headers -->
+    <text x="150" y="120" font-family="Inter, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">Project Requirements</text>
+    <text x="450" y="120" font-family="Inter, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">TEQ ARMADA Capabilities</text>
+
+    <!-- Connection Lines -->
+    <line x1="150" y1="140" x2="650" y2="140" stroke="#e0e0e0" stroke-width="2"/>
+
+    <!-- Project Requirements Box -->
+    <rect x="50" y="160" width="200" height="300" fill="#f8fafd" stroke="#3498db" stroke-width="2" rx="10"/>
+    
+    <!-- Requirements Text -->
+    <text x="70" y="190" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">1. Real-time Tracking</text>
+    <text x="70" y="250" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">2. Secure Communications</text>
+    <text x="70" y="310" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">3. System Integration</text>
+    <text x="70" y="370" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">4. Field Operations</text>
+    <text x="70" y="430" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">5. Technical Support</text>
+
+    <!-- Capabilities Box -->
+    <rect x="550" y="160" width="200" height="300" fill="#f8fafd" stroke="#2ecc71" stroke-width="2" rx="10"/>
+    
+    <!-- Capabilities Text -->
+    <text x="570" y="190" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Military Experience</text>
+    <text x="570" y="250" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Critical Mission Systems</text>
+    <text x="570" y="310" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Tech Partnerships</text>
+    <text x="570" y="370" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• Field Implementation</text>
+    <text x="570" y="430" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">• 24/7 Support Team</text>
+
+    <!-- Connection Lines -->
+    <path d="M 250 185 L 550 185" stroke="#3498db" stroke-width="2"/>
+    <path d="M 250 245 L 550 245" stroke="#3498db" stroke-width="2"/>
+    <path d="M 250 305 L 550 305" stroke="#3498db" stroke-width="2"/>
+    <path d="M 250 365 L 550 365" stroke="#3498db" stroke-width="2"/>
+    <path d="M 250 425 L 550 425" stroke="#3498db" stroke-width="2"/>
+
+    <!-- Strength Indicators -->
+    <circle cx="400" cy="185" r="8" fill="#2ecc71"/>
+    <circle cx="400" cy="245" r="8" fill="#2ecc71"/>
+    <circle cx="400" cy="305" r="8" fill="#2ecc71"/>
+    <circle cx="400" cy="365" r="8" fill="#2ecc71"/>
+    <circle cx="400" cy="425" r="8" fill="#2ecc71"/>
+
+    <!-- Legend -->
+    <rect x="300" y="500" width="200" height="60" fill="#f8fafd" stroke="#e0e0e0" stroke-width="1" rx="5"/>
+    <circle cx="320" cy="530" r="8" fill="#2ecc71"/>
+    <text x="340" y="535" font-family="Inter, sans-serif" font-size="14" fill="#2c3e50">Strong Capability Match</text>
+</svg>
