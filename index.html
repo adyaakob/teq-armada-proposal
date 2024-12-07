@@ -13,11 +13,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #3498db;
-            --text-color: #333;
-            --light-gray: #f5f6fa;
+            --primary-color: #1a365d;
+            --secondary-color: #2d4a8a;
+            --accent-color: #3182ce;
+            --text-color: #2d3748;
+            --light-gray: #f7fafc;
+            --border-color: #e2e8f0;
             --heading-font: 'Poppins', sans-serif;
             --body-font: 'Inter', sans-serif;
         }
@@ -31,7 +32,7 @@
         body {
             font-family: var(--body-font);
             font-weight: 400;
-            line-height: 1.6;
+            line-height: 1.7;
             color: var(--text-color);
             max-width: 1200px;
             margin: 0 auto;
@@ -47,38 +48,42 @@
 
         .proposal-container {
             background: white;
-            padding: 3rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding: 4rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         .header {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
         }
 
         .company-logo {
-            width: 100px;
+            width: 120px;
             height: auto;
-            margin: 1rem auto;
+            margin: 1.5rem auto;
         }
 
         .proposal-title {
             font-family: var(--heading-font);
             font-weight: 700;
             color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
         }
 
         .subtitle {
             font-family: var(--heading-font);
             color: var(--secondary-color);
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             margin-bottom: 2rem;
             font-weight: 500;
             letter-spacing: -0.01em;
+            line-height: 1.4;
         }
 
         .meta-info {
@@ -95,19 +100,22 @@
             border-radius: 5px;
             margin: 2rem 0;
             font-family: var(--body-font);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
 
         .confidential-notice {
-            background-color: #ff6b6b;
+            background-color: #fc8181;
             color: white;
             padding: 0.5rem;
             text-align: center;
             border-radius: 5px;
             margin: 2rem 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-family: var(--heading-font);
             font-weight: 500;
             letter-spacing: 0.02em;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
         }
 
         .toc {
@@ -142,23 +150,31 @@
         }
 
         .section {
-            margin: 2rem 0;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: white;
+            border-radius: 12px;
+            transition: transform 0.2s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-2px);
         }
 
         .section h2 {
             color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 0.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.75rem;
             font-family: var(--heading-font);
-            letter-spacing: -0.01em;
+            letter-spacing: -0.02em;
         }
 
         .section h3 {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            margin: 1.5rem 0 1rem 0;
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin: 2rem 0 1.25rem 0;
             font-family: var(--heading-font);
             letter-spacing: -0.01em;
         }
@@ -194,13 +210,24 @@
         }
 
         .section .components-list ol {
-            margin-left: 2rem;
-            list-style-position: outside;
+            list-style-type: decimal;
+            padding-left: 0;
+            margin: 1.5em 0;
+        }
+        
+        .section .components-list li {
+            margin-bottom: 1em;
+            line-height: 1.6;
+            text-align: justify;
+            padding-left: 2em;
+            text-indent: -2em;
+            margin-left: 2em;
+            color: var(--text-color);
         }
 
-        .section .components-list ol li {
-            padding-left: 1rem;
-            margin-bottom: 1rem;
+        .section .components-list li strong {
+            color: var(--primary-color);
+            font-weight: 500;
         }
 
         .diagram-container {
@@ -238,9 +265,12 @@
         }
 
         .system-diagram figcaption {
-            color: var(--secondary-color);
+            text-align: center;
+            color: var(--primary-color);
+            margin: 20px 0;
+            font-family: var(--heading-font);
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 1.1em;
         }
 
         .integration-diagram {
@@ -273,10 +303,10 @@
         }
 
         .table-responsive {
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            margin-bottom: 1rem;
-            box-shadow: inset -5px 0 5px -5px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
         }
 
         .table-responsive table {
@@ -482,31 +512,91 @@
             }
         }
 
+        /* Animations and transitions */
+        .section-hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        /* Back to top button */
         .back-to-top {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 2rem;
+            right: 2rem;
             background: var(--accent-color);
             color: white;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
             z-index: 1000;
-            cursor: pointer;
         }
 
-        .back-to-top.visible {
+        .back-to-top.show {
             opacity: 1;
+            cursor: pointer;
         }
 
         .back-to-top:hover {
             background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Print button */
+        .print-button {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-family: var(--body-font);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .proposal-container {
+                box-shadow: none;
+                padding: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
         }
 
         .lazy {
@@ -516,6 +606,147 @@
 
         .lazy.loaded {
             opacity: 1;
+        }
+
+        .scope-diagram {
+            width: 100%;
+            max-width: 1000px;
+            margin: 40px auto;
+            position: relative;
+            font-family: var(--body-font);
+        }
+        .scope-box {
+            border: 2px solid #333;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .teq-scope {
+            background-color: #f0f7ff;
+            border-color: #2b6cb0;
+        }
+        .enduser-scope {
+            background-color: #f8fafc;
+            border-color: #475569;
+        }
+        .scope-label {
+            font-family: var(--heading-font);
+            font-weight: 600;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            text-align: center;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .component {
+            margin: 15px auto;
+            padding: 15px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            max-width: 80%;
+            text-align: center;
+            font-size: 1.1em;
+            color: var(--text-color);
+            transition: transform 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .component:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        .api-interface {
+            border: 2px dashed #ed8936;
+            padding: 12px;
+            margin: 25px auto;
+            text-align: center;
+            background-color: #fffaf0;
+            max-width: 90%;
+            border-radius: 6px;
+            color: #c05621;
+            font-weight: 500;
+            position: relative;
+        }
+        .api-interface::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #ed8936;
+        }
+        .scope-notes {
+            margin-top: 40px;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        .scope-notes h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            font-family: var(--heading-font);
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .scope-notes ul {
+            margin-left: 0;
+            list-style: none;
+        }
+        .scope-notes ul li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+        }
+        .scope-notes ul li::before {
+            content: '•';
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .system-diagram h3 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+
+        /* Standardized figure styles */
+        figure {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        figure img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        figcaption {
+            text-align: center;
+            color: var(--primary-color);
+            margin: 20px 0;
+            font-family: var(--heading-font);
+            font-style: italic;
+            font-size: 1.1em;
+            line-height: 1.4;
+        }
+
+        /* Remove any specific figure caption styles */
+        .system-diagram figcaption,
+        .integration-diagram figcaption,
+        .gantt-chart figcaption {
+            /* Reset any specific styles to use the standard figcaption styles */
+            font-size: 1.1em;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -557,15 +788,22 @@
         <section class="toc">
             <h2>Table of Contents</h2>
             <ul>
-                <li><a href="#introduction">1. INTRODUCTION</a></li>
+                <li><a href="#introduction">1. INTRODUCTION</a>
+                    <ul>
+                        <li><a href="#company-background">1.1. Company Background</a></li>
+                        <li><a href="#relevant-experience">1.2. Relevant Experience</a></li>
+                        <li><a href="#agriculture">1.3. Application to Agriculture</a></li>
+                        <li><a href="#commitment">1.4. Commitment to Excellence</a></li>
+                    </ul>
+                </li>
                 <li><a href="#scope">2. SCOPE OF WORK</a></li>
-                <li><a href="#price">3. PRICE QUOTATION</a>
+                <li><a href="#pricing">3. PRICE QUOTATION</a>
                     <ul>
                         <li><a href="#quotation">3.1. Quotation</a></li>
                         <li><a href="#pricing-remarks">3.2. Pricing Remarks</a></li>
                     </ul>
                 </li>
-                <li><a href="#terms">4. TERMS AND CONDITIONS</a>
+                <li><a href="#payment">4. PAYMENT TERMS</a>
                     <ul>
                         <li><a href="#delivery">4.1. Delivery Conditions</a></li>
                         <li><a href="#estimated-delivery">4.2. Estimated delivery Date for equipment</a></li>
@@ -574,15 +812,16 @@
                         <li><a href="#contract">4.5. Coming into Force of Contract</a></li>
                         <li><a href="#bank">4.6. Bank Account</a></li>
                         <li><a href="#payment">4.7. Payment Terms</a></li>
+                        <li><a href="#flexibility">4.8. Flexibility</a></li>
                     </ul>
                 </li>
-                <li><a href="#warranty">5. WARRANTY</a>
+                <li><a href="#timeline">5. PROJECT AND DELIVERIES TIMELINE</a></li>
+                <li><a href="#warranty">6. WARRANTY</a>
                     <ul>
-                        <li><a href="#equipment-warranty">5.1. Warranty on Equipment</a></li>
-                        <li><a href="#conditional-warranty">5.2. Conditional Warranty</a></li>
+                        <li><a href="#equipment-warranty">6.1. Warranty on Equipment</a></li>
+                        <li><a href="#conditional-warranty">6.2. Conditional Warranty</a></li>
                     </ul>
                 </li>
-                <li><a href="#validity">6. PROJECT AND DELIVERIES TIMELINE</a></li>
                 <li><a href="#disclaimer">7. DISCLAIMER</a></li>
                 <li><a href="#validity">8. VALIDITY OF OFFER</a></li>
             </ul>
@@ -591,40 +830,39 @@
         <section id="introduction" class="section">
             <h2>1. INTRODUCTION</h2>
             
-            <h3>Company Background</h3>
+            <h3 id="company-background">1.1 Company Background</h3>
             <p>TEQ ARMADA, established in 2021, is committed to providing tailored solutions that meet today's field requirements. Despite our relative youth, we bring a wealth of expertise from military and civil critical missions, supported by strong technology partnerships worldwide. Our core competencies include:</p>
             
             <ul>
                 <li>Military-grade communication systems (HF/VHF)</li>
                 <li>Platform Installation (onboard armored vehicles and ships)</li>
-                <li>IoT Sensor Networks</li>
-                <li>Real-time Tracking Solutions</li>
-                <li>System Integration</li>
+                <li>System solutions</li>
+                <li>Integrated Logistics Support (ILS)</li>
             </ul>
 
-            <h3>Relevant Experience</h3>
-            <p>Our team brings extensive experience in implementing mission-critical tracking and communication systems. The following matrix illustrates how our capabilities directly align with the requirements of this project:</p>
+            <h3 id="relevant-experience">1.2 Relevant Experience</h3>
+            <p>While this marks our entry into the agricultural sector, our extensive background in wireless communications and system integration uniquely positions us to adapt LoRaWAN technology for plantation use. Our experience translates directly to the challenges of implementing IoT solutions in agricultural settings:</p>
 
             <figure class="system-diagram">
                 <img src="images/expertise-matrix-v4.svg" alt="TEQ ARMADA Capability Matrix" style="width: 100%; max-width: 1000px; margin: 2rem auto;">
                 <figcaption>Figure 1: TEQ ARMADA's Capability Matrix - Direct Alignment with Project Requirements</figcaption>
             </figure>
-            
-            <ul class="numbered-list">
+
+            <ol class="numbered-list">
                 <li>Long-range communication: Our expertise in military HF/VHF systems ensures optimal coverage for vast plantation areas.</li>
                 <li>Harsh environment resilience: Our experience with installations on armored vehicles and ships prepares us to create durable IoT solutions capable of withstanding extreme outdoor conditions.</li>
                 <li>Secure data transmission: Our experience with sensitive military communications guarantees top-tier security for agricultural data.</li>
                 <li>System integration: Our skills in developing comprehensive system solutions allow us to seamlessly integrate LoRaWAN technology into existing plantation operations.</li>
                 <li>Comprehensive lifecycle support: Our ILS experience ensures long-term success, from installation through maintenance and upgrades.</li>
-            </ul>
+            </ol>
 
-            <h3>Application to Agriculture</h3>
+            <h3 id="agriculture">1.3 Application to Agriculture</h3>
             <p>For this project, we propose utilizing the HKT GT-100 LoRaWAN GPS Tracker and Milesight SG500 Ultra Low Power Solar LoRaWAN® Gateway. These devices are specifically chosen for their robustness and suitability for oil palm plantation environments.</p>
             
-            <div class="diagram-container">
+            <figure class="system-diagram">
                 <img src="images/lorawan-architecture.svg" alt="LoRaWAN Worker Tracking System Architecture">
-                <p class="diagram-caption">Figure 2: System Architecture Overview - Illustrating the integration of GPS trackers, LoRaWAN gateway, and backend servers for plantation-wide worker tracking</p>
-            </div>
+                <figcaption>Figure 2: System Architecture Overview - Illustrating the integration of GPS trackers, LoRaWAN gateway, and backend servers for plantation-wide worker tracking</figcaption>
+            </figure>
             
             <p>We understand the unique challenges faced by oil palm plantations, including:</p>
             <ul>
@@ -635,7 +873,7 @@
             </ul>
             <p>Our solution addresses these challenges by leveraging our technical expertise in long-range, low-power communication systems, coupled with our experience in deploying resilient infrastructure in demanding environments.</p>
 
-            <h3>Commitment to Excellence</h3>
+            <h3 id="commitment">1.4 Commitment to Excellence</h3>
             <p>TEQ ARMADA is dedicated to delivering trusted solutions and reliable services. We pride ourselves on our comprehensive post-sales support, ensuring high field serviceability throughout the product lifecycle. By applying our technical knowledge and problem-solving skills, we are committed to delivering a tailored, efficient, and reliable IoT solution for precision agriculture in your oil palm plantation.</p>
         </section>
 
@@ -644,17 +882,48 @@
             <p>While this Budgetary Commercial Proposal provides an overview, a comprehensive technical proposal (ref:24M032/SP/170524) will be submitted alongside this document. The technical proposal contains detailed specifications and implementation plans.</p>
 
             <figure class="system-diagram">
-                <img src="images/system-diagram.svg" alt="Real-Time Worker Tracking System Architecture" width="800" height="400">
-                <figcaption>Figure 3: System Architecture of the Real-Time Worker Tracking Solution</figcaption>
+                <div class="scope-diagram">
+                    <!-- TEQ Armada Scope -->
+                    <div class="scope-box teq-scope">
+                        <div class="scope-label">TEQ Armada Scope of Work</div>
+                        <div class="component">End Device (LoRaWAN Sensors/Devices)</div>
+                        <div class="component">LoRaWAN Gateway</div>
+                        <div class="api-interface">API Interface Handover Point</div>
+                    </div>
+
+                    <!-- End User Scope -->
+                    <div class="scope-box enduser-scope">
+                        <div class="scope-label">End User Scope of Work</div>
+                        <div class="component">Cellular Network Infrastructure</div>
+                        <div class="component">Cloud Server</div>
+                        <div class="component">Dashboard Integration</div>
+                    </div>
+                </div>
+                <figcaption>Figure 3: System Architecture - Scope of Work Separation</figcaption>
+
+                <div class="scope-notes">
+                    <h4>Notes:</h4>
+                    <ul>
+                        <li>TEQ Armada provides complete implementation and support for LoRaWAN end devices and gateway infrastructure</li>
+                        <li>API documentation will be provided for seamless integration with end user systems</li>
+                        <li>End user is responsible for cellular network infrastructure, cloud server setup, and dashboard integration</li>
+                        <li>Technical support and consultation available during integration phase</li>
+                    </ul>
+                </div>
             </figure>
 
+            <figure class="system-diagram">
+                <img src="images/system-diagram.svg" alt="Real-Time Worker Tracking System Architecture" width="800" height="400">
+                <figcaption>Figure 4: System Architecture - Detailed Component Overview</figcaption>
+            </figure>
+            
             <h3>2.1 System Components</h3>
             <div class="components-list">
                 <ol>
-                    <li>End Devices: These are the tracking devices assigned to workers in the plantation. They communicate worker locations and other relevant data.</li>
-                    <li>LoRaWAN Gateways: These gateways receive data from the end devices over long distances using LoRaWAN technology. They act as intermediaries, forwarding the data to the central monitoring system.</li>
-                    <li>Solar Power Systems: These systems power the gateways, ensuring uninterrupted operation in remote plantation areas where traditional power sources may not be available.</li>
-                    <li>API for integration with existing plantation Central Monitoring Systems: This is the main hub where all data from the gateways is collected, processed, and displayed for plantation management to monitor worker activity in real time.</li>
+                    <li><strong>Network End Devices:</strong> These are the tracking devices assigned to workers in the plantation. They communicate worker locations and other relevant data.</li>
+                    <li><strong>LoRaWAN Gateways:</strong> These gateways receive data from the end devices over long distances using LoRaWAN technology. They act as intermediaries, forwarding the data to the central monitoring system.</li>
+                    <li><strong>Solar Power Systems:</strong> These systems power the gateways, ensuring uninterrupted operation in remote plantation areas where traditional power sources may not be available.</li>
+                    <li><strong>API for Integration with Existing Plantation Central Monitoring Systems:</strong> This is the main hub where all data from the gateways is collected, processed, and displayed for plantation management to monitor worker activity in real time.</li>
                 </ol>
             </div>
 
@@ -691,7 +960,7 @@
             <h3>2.3 Integration with Existing Systems</h3>
             <figure class="integration-diagram">
                 <img src="images/integration-diagram.svg" alt="System Integration Architecture" width="800" height="400">
-                <figcaption>Figure 4: Integration Architecture with Plantation Management System</figcaption>
+                <figcaption>Figure 5: Integration Architecture with Plantation Management System</figcaption>
             </figure>
             <ol>
                 <li>Provision of API for seamless integration with the plantation's current management systems</li>
@@ -754,6 +1023,8 @@
                 </table>
             </div>
 
+            <p class="price-note">Price quoted as one package, refer technical proposal page 14 for the Product Breakdown Structure.</p>
+
             <h3>3.2 Exclusions</h3>
             <ol>
                 <li>Network Server Hosting: The hosting of the LoRaWAN network server is not part of this proposal.</li>
@@ -762,23 +1033,55 @@
             </ol>
 
             <h3>3.3 Pricing Remarks</h3>
-            <ol>
+            <ul class="pricing-remarks">
                 <li>Delivery shall be DAP (INCOTERMS 2020), Tawau, Sabah Headquarters.</li>
-                <li>Only 2 LoRAWAN gateway will be provided, if the area coverage for cellular network is less and need more gateways, it will be consider as Variation Orders.</li>
+                <li>Only 2 LoRAWAN gateway will be provided, if the area coverage for cellular network is less and need more gateways, it will be consider as Variation Orders.
+                    <ul>
+                        <li>To ensure adequate coverage, a detailed survey of the plantation's topography and network conditions will be conducted prior to installation. This assessment will identify any potential coverage gaps and help determine if additional gateways might be necessary from the beginning, minimizing unexpected costs.</li>
+                        <li>Additionally, the cost implications of scaling the system, such as adding more gateways or upgrading infrastructure, will be discussed and planned in advance to ensure budget alignment.</li>
+                    </ul>
+                </li>
                 <li>This proposal will cover up to commissioning of the system up to Gateways, TEQ will provide API to be integrated with main contractor system.</li>
                 <li>TEQ will do on site installation and commissioning done by TEQ certified engineers and technician.</li>
-                <li>TEQ will provide training for the operation of the system to 20 trainees.</li>
+                <li>TEQ will provide training for the operation of the system to 20 trainees. TEQ shall provide 2 trainer and training material only. Training site and any F&B or other expenses for the training session is excluded and should be cover under Main Contractor.</li>
                 <li>Faulty equipment (under warranty) shall be return to TEQ (Kuala Lumpur) by Main contractor.</li>
-            </ol>
+                <li>Should the statement of work, the scope of supply change or should the requirements of different from any of the assumptions contained in this quotation, TEQ reserves the right to recalculate the price provided in this quotation.</li>
+            </ul>
         </section>
 
-        <section id="terms" class="section">
-            <h2>4. TERMS AND CONDITIONS</h2>
+        <section id="payment" class="section">
+            <h2>4. PAYMENT TERMS</h2>
 
             <h3>4.1 Delivery Conditions</h3>
-            <p>The supply shall be DAP, Tawau, Sabah Headquarters. TEQ ARMADA will be responsible for transporting the goods to DAP Sabah HQ, Tawau.</p>
+            <p>The supply shall be DAP, Tawau, Sabah Headquarters. If there are any changes in the place of delivery, it may impact the overall pricing.</p>
 
-            <h3>4.2 Bank Account</h3>
+            <ul class="delivery-conditions">
+                <li>TEQ ARMADA will be responsible for transporting the goods to DAP Sabah HQ, Tawau.</li>
+                <li>The risk transfers to the buyer once the goods are made available at the DAP Sabah HQ, Tawau.</li>
+            </ul>
+
+            <p><strong>Regarding customs clearance:</strong> (if any)</p>
+            <ul class="customs-clearance">
+                <li>TEQ ARMADA will handle all export customs clearance procedures.</li>
+                <li>The buyer will be responsible for import customs clearance and any import duties or taxes.</li>
+            </ul>
+
+            <h3>4.2 Estimated delivery Date for equipment</h3>
+            <p>T0 shall commence according to coming into forces of the contract requirements (refer to item 4.5). The estimated standard delivery date for equipment shall follow Table 1.</p>
+
+            <h3>4.3 Transfer of Risk</h3>
+            <p>Transfer of risk for equipment shall start upon delivery of equipment at destination stated in Para 4.1.</p>
+            <p>To ensure transparency, an inspection process will be conducted at the delivery site to verify the condition of the equipment. Both parties will document and sign off on the inspection results before the transfer of risk is finalized.</p>
+
+            <h3>4.4 Coming into Force of Contract</h3>
+            <p>The effective date of Coming into Force of contract shall be the occurrence of all the following:</p>
+            <ul class="contract-requirements">
+                <li>Receipt of Purchase Order.</li>
+                <li>Receipt of PO Acknowledgement from TEQ.</li>
+                <li>Receipt of Down Payment</li>
+            </ul>
+
+            <h3>4.5 Bank Account</h3>
             <div class="bank-details">
                 <p>All payment should be made payable to:</p>
                 <p>TEQ ARMADA Sdn Bhd<br>
@@ -788,17 +1091,18 @@
                 <p>Account No: CIMB 8604918579</p>
             </div>
 
-            <h3>4.3 Payment Terms</h3>
+            <h3>4.6 Payment Terms</h3>
             <ul class="payment-terms">
                 <li>Payment shall be made in Ringgit Malaysia (RM) by bank transfer.</li>
                 <li>30% down payment upon PO acknowledgement</li>
-                <li>30% upon shipment and delivery of equipment</li>
-                <li>30% upon installation and training</li>
-                <li>10% upon successful commissioning and acceptance</li>
+                <li>70% upon delivery of equipment</li>
             </ul>
+
+            <h3>4.7 Flexibility</h3>
+            <p>We're committed to finding terms that work for both parties. If these revised terms don't meet your needs, we're open to further discussion to find a mutually beneficial arrangement.</p>
         </section>
 
-        <section id="validity" class="section">
+        <section id="timeline" class="section">
             <h2>5. PROJECT AND DELIVERIES TIMELINE</h2>
             <p>We propose the following 12-month timeline for the implementation of the Real-Time Worker Tracking System:</p>
 
@@ -880,7 +1184,7 @@
                 <h4>Key Milestones:</h4>
                 <figure class="gantt-chart">
                     <img src="images/gantt-chart-updated.svg" alt="Project Timeline and Key Milestones Gantt Chart" style="width: 100%; max-width: 800px;">
-                    <figcaption>Figure 5: Project Timeline and Key Milestones Gantt Chart</figcaption>
+                    <figcaption>Figure 6: Project Timeline and Key Milestones Gantt Chart</figcaption>
                 </figure>
                 <ul>
                     <li>Completion of Planning and Design: End of Month 1</li>
@@ -905,15 +1209,20 @@
         <section id="warranty" class="section">
             <h2>6. WARRANTY</h2>
             
-            <h3>5.1 Warranty on Equipment</h3>
+            <h3>6.1 Warranty on Equipment</h3>
             <p>The equipment warranty is granted for a maximum duration of 12 months from the date of delivery order of the corresponding equipment.</p>
+            <p>Optional extended warranty plans or annual maintenance contracts can be offered for an additional cost to ensure long-term support and reliability of the equipment.</p>
 
-            <h3>5.2 Conditional Warranty</h3>
+            <h3>6.2 Conditional Warranty</h3>
+            <p>This paragraph describes the Hardware Warranty provision for the equipment and accessories delivered to Main contractor.</p>
             <p>Within the warranty period, TEQ undertakes to repair the faulty equipment. The faulty equipment is to be determined by the TEQ by using the test means.</p>
+            <p>In case of damages independent of normal equipment use (fire damage, crushing, miss-handling, etc.) or due to non-respect of maintenance procedures described in the maintenance documentation, the repairing or replacement of equipment are not covered by the warranty, but will be subject to a separate quotation.</p>
         </section>
 
         <section id="disclaimer" class="section">
             <h2>7. DISCLAIMER</h2>
+            <p>This offer is a one-time proposal and effective for the specified purchase only. All the terms in this document are valid for this purchase only and will not have any effect on previous and/or future purchases plans.</p>
+            <p>This document contains TEQ's proprietary data and shall not be used for other purposes than those for which it has been released to. Disclosure to third parties, either wholly or in part, is subject to written consent of TEQ.</p>
         </section>
 
         <section id="validity" class="section">

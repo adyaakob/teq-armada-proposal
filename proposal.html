@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoRaWAN Solution Proposal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+        }
+        .figure {
+            margin: 20px 0;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        .scope-diagram {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            position: relative;
+        }
+        .scope-box {
+            border: 2px solid #333;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .teq-scope {
+            background-color: #e6f3ff;
+            border-color: #0066cc;
+        }
+        .enduser-scope {
+            background-color: #f9f9f9;
+            border-color: #666;
+        }
+        .scope-label {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .component {
+            margin: 10px;
+            padding: 10px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        .api-interface {
+            border: 2px dashed #ff6600;
+            padding: 5px;
+            margin: 10px 0;
+            text-align: center;
+            background-color: #fff3e6;
+        }
+    </style>
+</head>
+<body>
+    <h1>LoRaWAN Solution Architecture</h1>
+    
+    <div class="figure">
+        <h2>Figure 3: Scope of Work Separation</h2>
+        <div class="scope-diagram">
+            <!-- TEQ Armada Scope -->
+            <div class="scope-box teq-scope">
+                <div class="scope-label">TEQ Armada Scope of Work</div>
+                <div class="component">End Device (LoRaWAN Sensors/Devices)</div>
+                <div class="component">LoRaWAN Gateway</div>
+                <div class="api-interface">API Interface Handover Point</div>
+            </div>
+
+            <!-- End User Scope -->
+            <div class="scope-box enduser-scope">
+                <div class="scope-label">End User Scope of Work</div>
+                <div class="component">Cellular Network Infrastructure</div>
+                <div class="component">Cloud Server</div>
+                <div class="component">Dashboard Integration</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px;">
+            <h3>Notes:</h3>
+            <ul>
+                <li>TEQ Armada provides complete implementation and support for LoRaWAN end devices and gateway infrastructure</li>
+                <li>API documentation will be provided for seamless integration with end user systems</li>
+                <li>End user is responsible for cellular network infrastructure, cloud server setup, and dashboard integration</li>
+                <li>Technical support and consultation available during integration phase</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
